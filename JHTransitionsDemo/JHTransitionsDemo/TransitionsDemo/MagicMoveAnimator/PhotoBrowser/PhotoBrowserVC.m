@@ -55,8 +55,11 @@ static NSString * const PhotoBrowserCCellIdentifier = @"PhotoBrowserCCellIdentif
     [super viewDidAppear:animated];
     
     if (self.selectIndexPath) {
-        NSArray *cells = [self.collectionView visibleCells];
-        self.selectImageView = [(PhotoBrowserCCell *)cells.firstObject imageView];
+//        NSArray *cells = [self.collectionView visibleCells];
+//        self.selectImageView = [(PhotoBrowserCCell *)cells.firstObject imageView];
+        
+        PhotoBrowserCCell *cell = (PhotoBrowserCCell *)[self.collectionView cellForItemAtIndexPath:self.selectIndexPath];
+        self.selectImageView = cell.imageView;
     }else {
         self.selectIndexPath = [NSIndexPath indexPathForItem:0 inSection:0];
     }
@@ -79,6 +82,9 @@ static NSString * const PhotoBrowserCCellIdentifier = @"PhotoBrowserCCellIdentif
     PhotoBrowserCCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:PhotoBrowserCCellIdentifier forIndexPath:indexPath];
     WeakSelf;
     cell.tapBlock = ^{
+        PhotoBrowserCCell *cell = (PhotoBrowserCCell *)[weakSelf.collectionView cellForItemAtIndexPath:indexPath];
+        weakSelf.selectImageView = cell.imageView;
+        
         [weakSelf addMagicMoveStartViewGroup:@[weakSelf.selectImageView]];
         weakSelf.addMagicMoveEndViewGroupBlock(indexPath);
         
