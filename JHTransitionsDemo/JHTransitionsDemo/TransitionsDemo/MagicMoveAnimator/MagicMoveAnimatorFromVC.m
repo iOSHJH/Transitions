@@ -21,7 +21,11 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSArray *images = @[[UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"],[UIImage imageNamed:@"aa"]];
+//    NSArray *images = @[[UIImage imageNamed:@"img1"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"], [UIImage imageNamed:@"aa"],[UIImage imageNamed:@"aa"]];
+    NSMutableArray *images = [NSMutableArray array];
+    for (int i = 1; i <= 9; i++) {
+        [images addObject:[UIImage imageNamed:[NSString stringWithFormat:@"img%d",i]]];
+    }
     
     PictureView *pictureView = [[PictureView alloc] initwithImages:images];
     CGSize size = [pictureView calcViewSize];

@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "ToVC.h"
 #import "JHMagicMoveAnimator.h"
 #import "UIViewController+JHTransition.h"
 #import "MagicMoveAnimatorFromVC.h"
@@ -25,16 +24,6 @@
     
     [self.view addSubview:self.tableView];
 
-}
-
-- (IBAction)buttonAction:(id)sender {
-    
-    JHMagicMoveAnimator *move = [JHMagicMoveAnimator new];
-    move.toDuration = 2.0f;
-    move.backDuration = 2.0f;
-    
-    ToVC *vc = [ToVC new];
-    [self jh_presentViewController:vc withAnimator:move];
 }
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate

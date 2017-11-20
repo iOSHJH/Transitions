@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		456D58F97A018D7BD1AA86B4 /* libPods-JHTransitionsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 507E9F7CDF2811A4C1B42465 /* libPods-JHTransitionsDemo.a */; };
+		7F29263B1FC27B580027C829 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F29263A1FC27B570027C829 /* UIImage+Extension.m */; };
 		7F5E9C1A1F2797DA00E363DD /* JHTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E9C191F2797DA00E363DD /* JHTransitionAnimator.m */; };
 		7FEA42261F2833530025181A /* JHMagicMoveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA42251F2833530025181A /* JHMagicMoveAnimator.m */; };
 		7FEA42291F28419B0025181A /* UIViewController+JHTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA42281F28419B0025181A /* UIViewController+JHTransition.m */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		42ABF1EFCAFBDE5C26E3332B /* Pods-JHTransitionsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHTransitionsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JHTransitionsDemo/Pods-JHTransitionsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		507E9F7CDF2811A4C1B42465 /* libPods-JHTransitionsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JHTransitionsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F2926391FC27B570027C829 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		7F29263A1FC27B570027C829 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		7F5E9C181F2797DA00E363DD /* JHTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTransitionAnimator.h; sourceTree = "<group>"; };
 		7F5E9C191F2797DA00E363DD /* JHTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTransitionAnimator.m; sourceTree = "<group>"; };
 		7FEA42241F2833530025181A /* JHMagicMoveAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHMagicMoveAnimator.h; sourceTree = "<group>"; };
@@ -110,21 +113,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7FA5DCBA1F29E8AE000EAFDE /* 仿36氪转场动画 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "仿36氪转场动画";
-			path = "JHTransitionsDemo/仿36氪转场动画";
-			sourceTree = SOURCE_ROOT;
-		};
 		7FEA422A1F2876CD0025181A /* TransitionsDemo */ = {
 			isa = PBXGroup;
 			children = (
 				7FF4F5651F27236E00CDFB22 /* ViewController.h */,
 				7FF4F5661F27236E00CDFB22 /* ViewController.m */,
 				7FEA422B1F2876CD0025181A /* MagicMoveAnimator */,
-				7FA5DCBA1F29E8AE000EAFDE /* 仿36氪转场动画 */,
 			);
 			path = TransitionsDemo;
 			sourceTree = "<group>";
@@ -260,6 +254,8 @@
 		7FF4F5951F2739B900CDFB22 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				7F2926391FC27B570027C829 /* UIImage+Extension.h */,
+				7F29263A1FC27B570027C829 /* UIImage+Extension.m */,
 				7FEA42271F28419B0025181A /* UIViewController+JHTransition.h */,
 				7FEA42281F28419B0025181A /* UIViewController+JHTransition.m */,
 			);
@@ -491,6 +487,7 @@
 				7FEA42291F28419B0025181A /* UIViewController+JHTransition.m in Sources */,
 				7FF4F5671F27236E00CDFB22 /* ViewController.m in Sources */,
 				7FEA42341F287DC30025181A /* MagicMoveAnimatorFromVC.m in Sources */,
+				7F29263B1FC27B580027C829 /* UIImage+Extension.m in Sources */,
 				7FEA42411F2899460025181A /* PictureViewCell.m in Sources */,
 				7FEA42421F2899460025181A /* PhotoBrowserCCell.m in Sources */,
 				7FEA42261F2833530025181A /* JHMagicMoveAnimator.m in Sources */,

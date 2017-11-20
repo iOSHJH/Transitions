@@ -9,6 +9,7 @@
 #import "JHMagicMoveAnimator.h"
 #import "PictureView.h"
 #import <objc/runtime.h>
+#import "UIImage+Extension.h"
 
 NSString *const kJHMagicMoveAnimatorStartViewVCKey = @"kJHMagicMoveAnimatorStartViewVCKey";
 NSString *const kJHMagicMoveAnimatorEndViewVCKey = @"kJHMagicMoveAnimatorEndViewVCKey";
@@ -48,7 +49,12 @@ NSString *const kJHMagicMoveAnimatorEndViewVCKey = @"kJHMagicMoveAnimatorEndView
         toVC.view.alpha = 1.0f;
         [tempViewGroup enumerateObjectsUsingBlock:^(UIView *tempSubView, NSUInteger idx, BOOL * _Nonnull stop) {
             if (isTo) { // to View
-                tempSubView.frame = CGRectMake(0, (ScreenHeight - ScreenWidth)*0.5, ScreenWidth, ScreenWidth);
+//                tempSubView.frame = CGRectMake(0, (ScreenHeight - ScreenWidth)*0.5, ScreenWidth, ScreenWidth);
+                
+                struct CGImage *cgimage = (__bridge struct CGImage *)(tempSubView.layer.contents);
+                UIImage *image =[UIImage imageWithCGImage:cgimage];
+                CGSize size = [UIImage scaleSizeWithWidth:ScreenWidth image:image];
+                tempSubView.frame = CGRectMake(0, (ScreenHeight - size.height)*0.5, size.width, size.height);
             }else { // back View
                 CGRect toRect = [toRects[idx] CGRectValue];
                 tempSubView.frame = toRect;
